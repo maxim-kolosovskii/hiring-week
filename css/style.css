@@ -81,11 +81,12 @@ body {
 .footer,
 .section {
   box-sizing: border-box;
-  min-height: 100vh;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 6vh 0;
+  padding: 7vh 0;
   transition: all 0.15s ease-in-out; }
+  @media screen and (min-width: 576px) {
+    .footer,
+    .section {
+      min-height: 100vh; } }
 
 h1,
 h2,
@@ -102,11 +103,11 @@ h1 {
   @media screen and (max-width: 1023px) {
     h1 {
       font-size: 2.188rem;
-      padding-bottom: 1.5vh; } }
+      margin-bottom: 2vh; } }
   @media screen and (min-width: 1024px) {
     h1 {
       font-size: 2.4rem;
-      padding-bottom: 3vh; } }
+      margin-bottom: 4vh; } }
   @media screen and (min-width: 1200px) {
     h1 {
       font-size: 2.7rem; } }
@@ -177,9 +178,7 @@ Header elements
       padding: 20vh 0 3vw; } }
   @media screen and (max-width: 767px) {
     .header {
-      background: url("../img/bg-azati-m-min.png") #FF8831 50% 0 no-repeat;
-      background-attachment: fixed;
-      background-size: cover; } }
+      background: url("../img/bg-azati-m-min.png") #FF8831 50% 100% no-repeat; } }
   @media screen and (min-width: 768px) {
     .header {
       background: url("../img/bg-azati-min.png") #FF8831 50% 100% no-repeat;
@@ -329,7 +328,7 @@ Form elements
 input,
 .form-control,
 textarea {
-  background-color: #e5e5e5;
+  background-color: #ededed;
   border: 0 none;
   border-radius: var(--bdrs);
   box-sizing: border-box;
@@ -351,17 +350,13 @@ input[type="checkbox"] {
 
 /* Form group */
 .form-group {
-  display: block; }
+  display: block;
+  line-height: 1.2; }
 
 /* Labels */
 label {
-  display: block; }
-
-.form-group label:first-child {
-  padding-top: 0; }
-
-.form-group label:not(:first-child) {
-  padding-top: 2vh; }
+  display: block;
+  padding-bottom: 2vh; }
 
 /* Select */
 /* Custom select */
@@ -372,11 +367,11 @@ label {
     display: none; }
 
 .select-selected {
-  background-color: #e5e5e5;
+  background-color: #ededed;
   border-radius: var(--bdrs);
   color: red;
-  height: 53px;
-  padding: 8px 16px 7px;
+  line-height: 1.15;
+  padding: 15px;
   transition: all 0.3s ease-in-out; }
   .select-selected:after {
     position: absolute;
@@ -395,8 +390,6 @@ label {
       top: 18px; }
 
 .select-items div, .select-selected {
-  border: 1px solid transparent;
-  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
   box-sizing: border-box;
   color: #384048;
   cursor: pointer;
@@ -412,8 +405,13 @@ label {
   right: 0;
   z-index: 99; }
   .select-items div {
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
     font-size: 0.85rem;
-    padding: 6px 16px 7px; }
+    padding: 6px 16px 7px;
+    min-height: 50px;
+    display: flex;
+    align-items: center; }
 
 .select-hide {
   display: none; }
@@ -426,8 +424,7 @@ label {
 .b-checkbox {
   display: block;
   position: relative;
-  padding-left: 45px;
-  margin-top: 3vh;
+  padding-left: 43px;
   cursor: pointer;
   font-size: 22px;
   -webkit-user-select: none;
@@ -441,7 +438,7 @@ label {
     height: 0;
     width: 0; }
   .b-checkbox .checkmark {
-    background-color: #e5e5e5;
+    background-color: #ededed;
     border-radius: var(--bdrs);
     position: absolute;
     top: 0;
@@ -487,8 +484,8 @@ button {
   align-items: center;
   justify-content: center;
   font-weight: 600;
+  height: 60px;
   outline: none;
-  min-width: 15vw;
   text-align: center;
   text-transform: none;
   transition: all 0.15s ease-in-out;
@@ -497,11 +494,10 @@ button {
     .btn,
     button {
       margin: 2vh auto;
-      padding: 12px 22px 13px; } }
+      padding: 12px 30px 13px; } }
   @media screen and (max-width: 374px) {
     .btn,
     button {
-      text-align: center;
       width: 100%; } }
   @media screen and (min-width: 375px) {
     .btn,
@@ -511,7 +507,11 @@ button {
     .btn,
     button {
       margin: 4vh auto;
-      padding: 18px 32px 19px; } }
+      padding: 18px 40px 19px; } }
+  @media screen and (min-width: 1400px) {
+    .btn,
+    button {
+      min-width: 250px; } }
   .btn:hover,
   button:hover {
     background-color: #9bf300;

@@ -125,8 +125,10 @@ CSS root variables media
 
 /* Technologies section */
 .section--technologies {
-  position: relative;
   z-index: 3; }
+  @media screen and (min-width: 768px) {
+    .section--technologies {
+      position: relative; } }
   @media screen and (max-width: 767px) {
     .section--technologies p br {
       display: none; } }
@@ -137,10 +139,10 @@ CSS root variables media
   .section--technologies .technologies {
     display: grid;
     grid-gap: 10px; }
-    @media screen and (max-width: 575px) {
+    @media screen and (max-width: 374px) {
       .section--technologies .technologies {
         grid-template-columns: 1fr 1fr; } }
-    @media screen and (min-width: 576px) {
+    @media screen and (min-width: 375px) {
       .section--technologies .technologies {
         grid-template-columns: 1fr 1fr 1fr; } }
     @media screen and (min-width: 768px) {
@@ -170,11 +172,15 @@ CSS root variables media
       margin: auto;
       opacity: .5;
       transition: all 0.15s ease-in-out; }
-      @media screen and (max-width: 767px) {
+      @media screen and (max-width: 575px) {
         .section--technologies .technologies__item img {
           max-height: 50px;
           max-width: 90px; } }
-      @media screen and (min-width: 768px) {
+      @media screen and (min-width: 576px) {
+        .section--technologies .technologies__item img {
+          max-height: 65px;
+          max-width: 115px; } }
+      @media screen and (min-width: 1400px) {
         .section--technologies .technologies__item img {
           max-height: 80px;
           max-width: 140px; } }
@@ -189,28 +195,63 @@ CSS root variables media
     .section--form {
       position: relative; } }
   .section--form .form {
-    display: grid;
-    grid-gap: var(--lg); }
+    display: grid; }
     @media screen and (max-width: 575px) {
       .section--form .form {
         grid-template-columns: 1fr; } }
     @media screen and (min-width: 576px) {
       .section--form .form {
-        grid-template-columns: 1fr 1fr;
-        margin-bottom: 2vh; } }
+        grid-template-columns: repeat(2, [col] 1fr);
+        grid-template-rows: repeat(2, [row] auto);
+        grid-gap: 0 var(--lg); }
+        .section--form .form .form-group--1 {
+          grid-column: col / span;
+          grid-row: row; }
+        .section--form .form .form-group--2 {
+          grid-column: col / span;
+          grid-row: row; }
+        .section--form .form .form-group--3 {
+          grid-column: col / span;
+          grid-row: row 2; } }
     @media screen and (min-width: 992px) {
       .section--form .form {
-        grid-template-columns: 1fr 1fr 1fr; } }
+        grid-template-columns: repeat(3, [col] 1fr); }
+        .section--form .form .form-group--1,
+        .section--form .form .form-group--2,
+        .section--form .form .form-group--3 {
+          grid-column: col / span;
+          grid-row: row; } }
+  .section--form .form-group--4 {
+    width: 100%;
+    display: grid; }
+    @media screen and (max-width: 575px) {
+      .section--form .form-group--4 {
+        grid-template-columns: 1fr; } }
+    @media screen and (min-width: 576px) {
+      .section--form .form-group--4 {
+        grid-template-columns: 1fr;
+        margin-bottom: 2vh;
+        grid-column: col 2 / span;
+        grid-row: row 2; } }
+    @media screen and (min-width: 992px) {
+      .section--form .form-group--4 {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: var(--lg);
+        grid-column: col / span 3;
+        grid-row: row 2; } }
   .section--form h1 {
     max-width: 60vw; }
-  @media screen and (min-width: 768px) {
-    .section--form .b-checkbox {
-      max-width: 62%; } }
-  .section--form .b-checkbox .small {
-    display: block; }
+  .section--form .b-checkbox {
+    margin-top: 22px;
+    padding-bottom: 2vh; }
+    .section--form .b-checkbox .small {
+      display: block; }
   .section--form .btn {
-    display: block;
-    margin-right: 0; }
+    margin-bottom: 0; }
+    @media screen and (min-width: 576px) {
+      .section--form .btn {
+        margin-top: auto;
+        margin-right: 0; } }
 
 /* Offer section */
 .section--offer {
