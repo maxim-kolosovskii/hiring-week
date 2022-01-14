@@ -1,0 +1,259 @@
+/*
+CSS root variables media
+*/
+@media screen and (max-width: 1199px) {
+  :root {
+    --bdrs: 5px;
+    --sm: 5px;
+    --md: 12px;
+    --lg: 20px;
+    --xl: 35px; } }
+@media screen and (min-width: 1200px) {
+  :root {
+    --bdrs: 10px;
+    --sm: 8px;
+    --md: 15px;
+    --lg: 30px;
+    --xl: 55px; } }
+@media screen and (max-width: 991px) {
+  :root {
+    --font-size-base: 16px; } }
+@media screen and (min-width: 992px) {
+  :root {
+    --font-size-base: 20px; } }
+.section {
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0; }
+  .section.section--white {
+    background-color: #fff; }
+  .section.section--orange {
+    background-color: #FF8831; }
+
+/* Participation section */
+.section--participation {
+  z-index: 1; }
+  .section--participation .nav-horizontal {
+    margin-top: 120px;
+    display: grid; }
+    @media screen and (max-width: 767px) {
+      .section--participation .nav-horizontal {
+        margin-left: 35px; } }
+    @media screen and (max-width: 575px) {
+      .section--participation .nav-horizontal {
+        grid-template-columns: 1fr; } }
+    @media screen and (min-width: 576px) {
+      .section--participation .nav-horizontal {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1vw; } }
+    @media screen and (min-width: 992px) {
+      .section--participation .nav-horizontal {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 5vw; } }
+    .section--participation .nav-horizontal li {
+      list-style: none;
+      margin-left: 20px;
+      min-height: 170px;
+      position: relative;
+      z-index: 2; }
+      @media screen and (min-width: 576px) {
+        .section--participation .nav-horizontal li {
+          line-height: 1.6; } }
+      .section--participation .nav-horizontal li:before {
+        background-color: #dff0ff;
+        border-radius: 50%;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Nunito Sans", sans-serif;
+        font-size: 4rem;
+        height: 150px;
+        width: 150px;
+        position: absolute;
+        top: -110px;
+        left: -60px;
+        z-index: -1; }
+      .section--participation .nav-horizontal li:nth-child(1):before {
+        content: '1';
+        transform: scale(0.5); }
+      .section--participation .nav-horizontal li:nth-child(2):before {
+        content: '2';
+        transform: scale(0.75); }
+      .section--participation .nav-horizontal li:nth-child(3):before {
+        content: '3'; }
+      .section--participation .nav-horizontal li:nth-child(4):before {
+        content: '4';
+        transform: scale(1.25); }
+      .section--participation .nav-horizontal li span {
+        font-weight: 600; }
+        @media screen and (max-width: 575px) {
+          .section--participation .nav-horizontal li span br {
+            display: none; } }
+      .section--participation .nav-horizontal li:after {
+        content: '';
+        background-color: #FF8831;
+        height: .7vh;
+        position: absolute;
+        left: -5px;
+        z-index: -1;
+        width: 26px;
+        opacity: .8;
+        transition: all 0.3s ease-in-out;
+        -webkit-transform: translate3d(0, 0, 0); }
+        @media screen and (max-width: 991px) {
+          .section--participation .nav-horizontal li:after {
+            top: 23px; } }
+        @media screen and (min-width: 992px) {
+          .section--participation .nav-horizontal li:after {
+            top: 26px; } }
+      .section--participation .nav-horizontal li:hover:after {
+        width: 100%; }
+
+/* Why section */
+.section--why {
+  z-index: 2; }
+  @media screen and (max-width: 767px) {
+    .section--why h1 br {
+      display: none; } }
+  @media screen and (min-width: 768px) {
+    .section--why h2,
+    .section--why p {
+      padding-left: 20vw;
+      width: auto; } }
+
+/* Technologies section */
+.section--technologies {
+  position: relative;
+  z-index: 3; }
+  @media screen and (max-width: 767px) {
+    .section--technologies p br {
+      display: none; } }
+  @media screen and (min-width: 768px) {
+    .section--technologies p {
+      padding-left: 20vw;
+      width: auto; } }
+  .section--technologies .technologies {
+    display: grid;
+    grid-gap: 10px; }
+    @media screen and (max-width: 575px) {
+      .section--technologies .technologies {
+        grid-template-columns: 1fr 1fr; } }
+    @media screen and (min-width: 576px) {
+      .section--technologies .technologies {
+        grid-template-columns: 1fr 1fr 1fr; } }
+    @media screen and (min-width: 768px) {
+      .section--technologies .technologies {
+        padding-left: 18vw;
+        width: auto; } }
+    @media screen and (min-width: 992px) {
+      .section--technologies .technologies {
+        grid-template-columns: 1fr 1fr 1fr 1fr; } }
+    @media screen and (min-width: 1400px) {
+      .section--technologies .technologies {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; } }
+  .section--technologies .technologies__item {
+    display: flex;
+    align-items: center;
+    text-align: center; }
+    @media screen and (max-width: 767px) {
+      .section--technologies .technologies__item {
+        height: 100px; } }
+    @media screen and (min-width: 768px) {
+      .section--technologies .technologies__item {
+        height: 125px;
+        padding: 10px; } }
+    .section--technologies .technologies__item img {
+      display: block;
+      height: auto;
+      margin: auto;
+      opacity: .5;
+      transition: all 0.15s ease-in-out; }
+      @media screen and (max-width: 767px) {
+        .section--technologies .technologies__item img {
+          max-height: 50px;
+          max-width: 90px; } }
+      @media screen and (min-width: 768px) {
+        .section--technologies .technologies__item img {
+          max-height: 80px;
+          max-width: 140px; } }
+    .section--technologies .technologies__item:hover img {
+      opacity: 1;
+      -webkit-transform: scale(1.25); }
+
+/* Form section */
+.section--form {
+  z-index: 4; }
+  @media screen and (max-width: 575px) {
+    .section--form {
+      position: relative; } }
+  .section--form .form {
+    display: grid;
+    grid-gap: var(--lg); }
+    @media screen and (max-width: 575px) {
+      .section--form .form {
+        grid-template-columns: 1fr; } }
+    @media screen and (min-width: 576px) {
+      .section--form .form {
+        grid-template-columns: 1fr 1fr;
+        margin-bottom: 2vh; } }
+    @media screen and (min-width: 992px) {
+      .section--form .form {
+        grid-template-columns: 1fr 1fr 1fr; } }
+  .section--form h1 {
+    max-width: 60vw; }
+  @media screen and (min-width: 768px) {
+    .section--form .b-checkbox {
+      max-width: 62%; } }
+  .section--form .b-checkbox .small {
+    display: block; }
+  .section--form .btn {
+    display: block;
+    margin-right: 0; }
+
+/* Offer section */
+.section--offer {
+  z-index: 5; }
+  .section--offer .offer {
+    display: grid;
+    grid-gap: var(--lg);
+    grid-auto-rows: 100px; }
+    @media screen and (max-width: 575px) {
+      .section--offer .offer {
+        grid-template-columns: 1fr; } }
+    @media screen and (min-width: 576px) {
+      .section--offer .offer {
+        grid-template-columns: 1fr 1fr; } }
+    @media screen and (min-width: 992px) {
+      .section--offer .offer {
+        grid-template-columns: 1fr 1fr 1fr; } }
+  .section--offer .offer_item {
+    padding-left: 105px;
+    display: flex;
+    align-items: center; }
+    .section--offer .offer_item.offer_item--anywhere {
+      background: url("../img/azati_world_guaranteed_anywhere.png") 0 0 no-repeat; }
+    .section--offer .offer_item.offer_item--bonuses {
+      background: url("../img/azati_world_guaranteed_bonuses.png") 0 0 no-repeat; }
+    .section--offer .offer_item.offer_item--care {
+      background: url("../img/azati_world_guaranteed_care.png") 0 0 no-repeat; }
+    .section--offer .offer_item.offer_item--collaboration {
+      background: url("../img/azati_world_guaranteed_collaboration.png") 0 0 no-repeat; }
+    .section--offer .offer_item.offer_item--languages {
+      background: url("../img/azati_world_guaranteed_languages.png") 0 0 no-repeat; }
+    .section--offer .offer_item.offer_item--office {
+      background: url("../img/azati_world_guaranteed_office.png") 0 0 no-repeat; }
+    .section--offer .offer_item.offer_item--sale {
+      background: url("../img/azati_world_guaranteed_sale.png") 0 0 no-repeat; }
+    .section--offer .offer_item.offer_item--schedule {
+      background: url("../img/azati_world_guaranteed_schedule.png") 0 0 no-repeat; }
+    .section--offer .offer_item.offer_item--tuition {
+      background: url("../img/azati_world_guaranteed_tuition.png") 0 0 no-repeat; }
+
+.blur-tmp {
+  -webkit-filter: blur(3px);
+  filter: blur(3px); }
+  .blur-tmp:focus, .blur-tmp:hover {
+    -webkit-filter: blur(0px);
+    filter: blur(0px); }
