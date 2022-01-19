@@ -127,7 +127,8 @@ nav ul {
   list-style: none; }
 
 a {
-  text-decoration: none; }
+  color: #384048;
+  text-decoration: underline; }
   a a:focus, a:active, a:hover {
     outline: none;
     text-decoration: none; }
@@ -141,6 +142,9 @@ strong {
 
 blockquote {
   margin: 0; }
+
+address {
+  font-style: inherit; }
 
 img {
   object-fit: cover; }
@@ -161,13 +165,13 @@ img {
 Header elements
 */
 .header {
-  color: #0a106c;
+  color: #000555;
   box-sizing: border-box;
   display: flex;
-  min-height: 90vh;
+  min-height: 94vh;
   transition: all 0.15s ease-in-out; }
   .header.lazy {
-    background-color: #FF8831;
+    background-color: #F2AE2C;
     background-image: none; }
   @media screen and (max-width: 991px) {
     .header {
@@ -175,13 +179,13 @@ Header elements
       padding: 0 var(--md); } }
   @media screen and (min-width: 992px) {
     .header {
-      padding: 20vh 0 3vw; } }
+      padding: 10vh 0 3vw; } }
   @media screen and (max-width: 767px) {
     .header {
-      background: url("../img/bg-azati-m-min.png") #FF8831 50% 100% no-repeat; } }
+      background: url("../img/bg-azati-m-min.png") #F2AE2C 50% 100% no-repeat; } }
   @media screen and (min-width: 768px) {
     .header {
-      background: url("../img/bg-azati-min.png") #FF8831 50% 100% no-repeat;
+      background: url("../img/bg-azati-min.png") #F2AE2C 50% 100% no-repeat;
       background-attachment: fixed;
       background-size: cover; } }
   .header .content-box {
@@ -204,19 +208,8 @@ Header elements
       .header h1 {
         font-size: 5rem; } }
     .header h1 span {
-      color: #baff40;
-      position: absolute;
-      top: 0;
-      left: -3px;
-      z-index: -1;
-      transition: all 0.15s ease-in-out;
-      -webkit-transform: translate3d(0, 0, 0); }
-      .header h1 span:after {
-        color: #ffad43;
-        position: absolute;
-        top: 0;
-        right: -12px;
-        z-index: -1; }
+      display: block;
+      font-size: 2rem; }
   .header h2 {
     font-size: 2rem;
     font-weight: 700;
@@ -231,13 +224,15 @@ Header elements
     animation: scaleOut 0.5s ease-in-out;
     animation-fill-mode: forwards;
     animation-delay: .5s;
-    transform: scale(1); }
+    transform: scale(1);
+    transform: perspective(1px) translateZ(0); }
     @media screen and (min-width: 768px) {
       .header .btn {
         margin-left: 20vw;
         width: auto; } }
     .header .btn:hover {
-      transform: scale(2); }
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1); }
 @-webkit-keyframes scaleOut {
   0% {
     opacity: 0;
@@ -258,11 +253,6 @@ Header elements
     transform: scale(1); } }
   .header:hover h1 {
     letter-spacing: 0; }
-    .header:hover h1 span {
-      color: #fff;
-      -webkit-transform: perspective(100px) translate3d(-3px, 0, 0); }
-  .header:hover .btn {
-    transform: scale(2); }
 
 /*
 Footer elements
@@ -473,12 +463,12 @@ Buttons
 */
 .btn,
 button {
-  background-color: #e1ff51;
+  background-color: #ffeb4a;
   border: 0 none;
   border-radius: var(--xl);
   box-sizing: border-box;
-  box-shadow: 1px 2px 3px 0 rgba(239, 101, 35, 0.05);
-  color: #0C5DDD;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  color: #000555;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -489,7 +479,10 @@ button {
   text-align: center;
   text-transform: none;
   transition: all 0.15s ease-in-out;
-  white-space: nowrap; }
+  white-space: nowrap;
+  transform: perspective(1px) translateZ(0);
+  -webkit-transition-property: box-shadow, transform;
+  transition-property: box-shadow, transform; }
   @media screen and (max-width: 767px) {
     .btn,
     button {
@@ -514,12 +507,13 @@ button {
       min-width: 250px; } }
   .btn:hover,
   button:hover {
-    background-color: #9bf300;
-    -webkit-box-shadow: 0 7px 11px 0 rgba(239, 101, 35, 0.3);
-    box-shadow: 0 7px 11px 0 rgba(239, 101, 35, 0.3);
+    background-color: #fffb0f;
+    box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
     border: 0 none;
-    color: #0a106c;
-    text-decoration: none; }
+    letter-spacing: 3px;
+    text-decoration: none;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1); }
   .btn:focus,
   button:focus {
     outline: none; }

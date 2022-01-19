@@ -29,7 +29,7 @@ CSS root variables media
   .section.section--white {
     background-color: #fff; }
   .section.section--orange {
-    background-color: #FF8831; }
+    background-color: #F2AE2C; }
 
 /* Participation section */
 .section--participation {
@@ -93,14 +93,14 @@ CSS root variables media
             display: none; } }
       .section--participation .nav-horizontal li:after {
         content: '';
-        background-color: #FF8831;
+        background-color: #F2AE2C;
         height: .7vh;
         position: absolute;
         left: -5px;
         z-index: -1;
         width: 26px;
         opacity: .8;
-        transition: all 0.3s ease-in-out;
+        transition: all 0.15s ease-in-out;
         -webkit-transform: translate3d(0, 0, 0); }
         @media screen and (max-width: 991px) {
           .section--participation .nav-horizontal li:after {
@@ -113,6 +113,7 @@ CSS root variables media
 
 /* Why section */
 .section--why {
+  color: #fff;
   z-index: 2; }
   @media screen and (max-width: 767px) {
     .section--why h1 br {
@@ -122,6 +123,15 @@ CSS root variables media
     .section--why p {
       padding-left: 20vw;
       width: auto; } }
+  .section--why small {
+    display: block;
+    padding: 2vh 0 2vh 10px;
+    position: relative; }
+    .section--why small:before {
+      content: '*';
+      position: absolute;
+      top: 24px;
+      left: 0; }
 
 /* Technologies section */
 .section--technologies {
@@ -162,6 +172,9 @@ CSS root variables media
     @media screen and (max-width: 767px) {
       .section--technologies .technologies__item {
         height: 100px; } }
+    @media screen and (max-width: 575px) {
+      .section--technologies .technologies__item {
+        height: 70px; } }
     @media screen and (min-width: 768px) {
       .section--technologies .technologies__item {
         height: 125px;
@@ -171,7 +184,7 @@ CSS root variables media
       height: auto;
       margin: auto;
       opacity: .5;
-      transition: all 0.15s ease-in-out; }
+      transition: all 0.3s ease-in-out; }
       @media screen and (max-width: 575px) {
         .section--technologies .technologies__item img {
           max-height: 50px;
@@ -186,7 +199,7 @@ CSS root variables media
           max-width: 140px; } }
     .section--technologies .technologies__item:hover img {
       opacity: 1;
-      -webkit-transform: scale(1.25); }
+      -webkit-transform: scale(1.2); }
 
 /* Form section */
 .section--form {
