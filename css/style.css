@@ -8,6 +8,7 @@
  # Forms
  # Buttons
  # Icons
+ # Lines
 --------------------------------------------------------------*/
 /*
 CSS root variables media
@@ -134,7 +135,7 @@ a {
     text-decoration: none; }
 
 .small {
-  font-size: 0.75rem;
+  font-size: .75em;
   line-height: 1.2; }
 
 strong {
@@ -207,9 +208,11 @@ Header elements
     @media screen and (min-width: 1200px) {
       .header h1 {
         font-size: 5rem; } }
-    .header h1 span {
+    .header h1 small {
       display: block;
-      font-size: 2rem; }
+      font-size: .5em; }
+    .header h1 span {
+      display: block; }
   .header h2 {
     font-size: 2rem;
     font-weight: 700;
@@ -652,3 +655,27 @@ Icons as html-tag
   .btn--read-more:hover {
     background-color: transparent;
     background-position-y: 70%; }
+
+/*
+Icons as html-tag
+*/
+.lines {
+  width: max-content; }
+  .lines.lines--vert {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; }
+    .lines.lines--vert div {
+      height: 15vh;
+      width: 1vw; }
+  .lines.lines--horiz {
+    grid-template-columns: 1fr; }
+    .lines.lines--horiz div {
+      height: 1vh;
+      width: 10vw; }
+  .lines.lines--white div {
+    background-color: #fff; }
+  .lines.lines--blue div {
+    background-color: #000555; }
+  .lines.lines--orange div {
+    background-color: #EF6523; }
