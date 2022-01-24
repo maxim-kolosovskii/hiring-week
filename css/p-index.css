@@ -22,10 +22,13 @@ CSS root variables media
   :root {
     --font-size-base: 20px; } }
 .section {
-  display: flex;
-  align-items: center;
-  position: sticky;
   top: 0; }
+  @media screen and (max-width: 575px) {
+    .section {
+      position: relative; } }
+  @media screen and (min-width: 576px) {
+    .section {
+      position: sticky; } }
   .section.section--white {
     background-color: #fff; }
   .section.section--orange {
@@ -33,7 +36,17 @@ CSS root variables media
 
 /* Participation section */
 .section--participation {
-  z-index: 1; }
+  position: relative;
+  z-index: 1;
+  min-height: 70vh;
+  align-items: end;
+  padding-bottom: 0 !important; }
+  .section--participation.replace-color {
+    background-color: #F2AE2C;
+    transition: background-color 0.75s ease-in-out; }
+    .section--participation.replace-color + .section--why {
+      background-color: #F2AE2C;
+      transition: background-color 0.75s ease-in-out; }
   .section--participation .nav-horizontal {
     margin-top: 120px;
     display: grid; }
@@ -61,7 +74,7 @@ CSS root variables media
         .section--participation .nav-horizontal li {
           line-height: 1.6; } }
       .section--participation .nav-horizontal li:before {
-        background-color: #dff0ff;
+        background-color: rgba(0, 118, 223, 0.1);
         border-radius: 50%;
         color: #fff;
         display: flex;
@@ -74,7 +87,8 @@ CSS root variables media
         position: absolute;
         top: -110px;
         left: -60px;
-        z-index: -1; }
+        z-index: -1;
+        transition: background-color 0.15s ease-in-out; }
       .section--participation .nav-horizontal li:nth-child(1):before {
         content: '1';
         transform: scale(0.5); }
@@ -100,7 +114,7 @@ CSS root variables media
         z-index: -1;
         width: 26px;
         opacity: .8;
-        transition: all 0.15s ease-in-out;
+        transition: all 0.6s ease-in-out;
         -webkit-transform: translate3d(0, 0, 0); }
         @media screen and (max-width: 991px) {
           .section--participation .nav-horizontal li:after {
@@ -110,6 +124,10 @@ CSS root variables media
             top: 26px; } }
       .section--participation .nav-horizontal li:hover:after {
         width: 100%; }
+  .section--participation.replace-color .nav-horizontal li:before {
+    background-color: rgba(255, 255, 255, 0.1); }
+  .section--participation.replace-color .nav-horizontal li:after {
+    background-color: #dff0ff; }
 
 /* Why section */
 .section--why {
@@ -129,7 +147,7 @@ CSS root variables media
       flex-direction: column;
       justify-content: space-between;
       height: 100%;
-      min-height: 40vh;
+      min-height: 30vh;
       box-sizing: border-box; } }
   .section--why small {
     display: block;
@@ -141,9 +159,59 @@ CSS root variables media
       top: 24px;
       left: 0; }
 
+/* Offer section */
+.section--offer {
+  z-index: 4; }
+  .section--offer .offer {
+    display: grid;
+    grid-gap: var(--lg); }
+    @media screen and (max-width: 575px) {
+      .section--offer .offer {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 80px; } }
+    @media screen and (min-width: 576px) {
+      .section--offer .offer {
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: 100px; } }
+    @media screen and (min-width: 992px) {
+      .section--offer .offer {
+        grid-template-columns: 1fr 1fr 1fr; } }
+  .section--offer .offer_item {
+    display: flex;
+    align-items: center; }
+    @media screen and (max-width: 575px) {
+      .section--offer .offer_item {
+        background-size: auto 100% !important;
+        padding-left: 70px; } }
+    @media screen and (min-width: 576px) {
+      .section--offer .offer_item {
+        padding-left: 85px; } }
+    .section--offer .offer_item.offer_item--anywhere {
+      background: url("../img/i-work-anywhere.svg") 0 50% no-repeat; }
+    .section--offer .offer_item.offer_item--bonuses {
+      background: url("../img/i-personal-bonuses.svg") 0 50% no-repeat; }
+    .section--offer .offer_item.offer_item--care {
+      background: url("../img/i-medical-insurance.svg") 0 50% no-repeat; }
+    .section--offer .offer_item.offer_item--collaboration {
+      background: url("../img/azati_world_guaranteed_collaboration.png") 0 50% no-repeat; }
+    .section--offer .offer_item.offer_item--languages {
+      background: url("../img/i-foreign-languages.svg") 0 50% no-repeat; }
+    .section--offer .offer_item.offer_item--office {
+      background: url("../img/i-comfortable-office.svg") 0 50% no-repeat; }
+    .section--offer .offer_item.offer_item--sale {
+      background: url("../img/i-discount-program.svg") 0 50% no-repeat; }
+    .section--offer .offer_item.offer_item--schedule {
+      background: url("../img/i-flexible-schedule.svg") 0 50% no-repeat; }
+    .section--offer .offer_item.offer_item--tuition {
+      background: url("../img/i-tuition-support.svg") 0 50% no-repeat; }
+
 /* Technologies section */
 .section--technologies {
+  align-items: end;
   z-index: 3; }
+  @media screen and (min-width: 576px) {
+    .section--technologies {
+      min-height: 90vh; } }
   @media screen and (min-width: 768px) {
     .section--technologies {
       position: relative; } }
@@ -179,13 +247,13 @@ CSS root variables media
     text-align: center; }
     @media screen and (max-width: 767px) {
       .section--technologies .technologies__item {
-        height: 100px; } }
+        height: 85px; } }
     @media screen and (max-width: 575px) {
       .section--technologies .technologies__item {
         height: 70px; } }
     @media screen and (min-width: 768px) {
       .section--technologies .technologies__item {
-        height: 125px;
+        height: 100px;
         padding: 10px; } }
     .section--technologies .technologies__item img {
       display: block;
@@ -211,7 +279,7 @@ CSS root variables media
 
 /* Form section */
 .section--form {
-  z-index: 4; }
+  z-index: 5; }
   @media screen and (max-width: 575px) {
     .section--form {
       position: relative; } }
@@ -267,55 +335,14 @@ CSS root variables media
     padding-bottom: 2vh; }
     .section--form .b-checkbox .small {
       display: block; }
+    .section--form .b-checkbox a {
+      text-decoration: underline;
+      transition: all 0.3s ease-in-out; }
+      .section--form .b-checkbox a:hover {
+        text-decoration: none; }
   .section--form .btn {
     margin-bottom: 0; }
     @media screen and (min-width: 576px) {
       .section--form .btn {
         margin-top: auto;
         margin-right: 0; } }
-
-/* Offer section */
-.section--offer {
-  z-index: 5; }
-  .section--offer .offer {
-    display: grid;
-    grid-gap: var(--lg);
-    grid-auto-rows: 100px; }
-    @media screen and (max-width: 575px) {
-      .section--offer .offer {
-        grid-template-columns: 1fr; } }
-    @media screen and (min-width: 576px) {
-      .section--offer .offer {
-        grid-template-columns: 1fr 1fr; } }
-    @media screen and (min-width: 992px) {
-      .section--offer .offer {
-        grid-template-columns: 1fr 1fr 1fr; } }
-  .section--offer .offer_item {
-    padding-left: 105px;
-    display: flex;
-    align-items: center; }
-    .section--offer .offer_item.offer_item--anywhere {
-      background: url("../img/azati_world_guaranteed_anywhere.png") 0 0 no-repeat; }
-    .section--offer .offer_item.offer_item--bonuses {
-      background: url("../img/azati_world_guaranteed_bonuses.png") 0 0 no-repeat; }
-    .section--offer .offer_item.offer_item--care {
-      background: url("../img/azati_world_guaranteed_care.png") 0 0 no-repeat; }
-    .section--offer .offer_item.offer_item--collaboration {
-      background: url("../img/azati_world_guaranteed_collaboration.png") 0 0 no-repeat; }
-    .section--offer .offer_item.offer_item--languages {
-      background: url("../img/azati_world_guaranteed_languages.png") 0 0 no-repeat; }
-    .section--offer .offer_item.offer_item--office {
-      background: url("../img/azati_world_guaranteed_office.png") 0 0 no-repeat; }
-    .section--offer .offer_item.offer_item--sale {
-      background: url("../img/azati_world_guaranteed_sale.png") 0 0 no-repeat; }
-    .section--offer .offer_item.offer_item--schedule {
-      background: url("../img/azati_world_guaranteed_schedule.png") 0 0 no-repeat; }
-    .section--offer .offer_item.offer_item--tuition {
-      background: url("../img/azati_world_guaranteed_tuition.png") 0 0 no-repeat; }
-
-.blur-tmp {
-  -webkit-filter: blur(3px);
-  filter: blur(3px); }
-  .blur-tmp:focus, .blur-tmp:hover {
-    -webkit-filter: blur(0px);
-    filter: blur(0px); }

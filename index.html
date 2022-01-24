@@ -6,6 +6,15 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
     <!--[if IE]><meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1" /><![endif]-->
     <title>Azati Hiring Week</title>
+    <meta name="description" content="Landing page of Azati Hiring Week.">
+    <meta name="author" content="Azati">
+
+    <meta property="og:title" content="Software company in Grodno">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.azati.world/hiring/">
+    <meta property="og:description" content="Landing page of Azati Hiring Week.">
+    <meta property="og:image" content="image.png">
+
     <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png">
@@ -13,13 +22,11 @@
     <link rel="mask-icon" href="./img/favicon/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
+
     <!--Styles CSS-->
-<!--    <link rel="preconnect" href="https://fonts.googleapis.com">-->
-<!--    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>-->
-<!--    <link href="https://fonts.googleapis.com/css2?family=Cabin+Condensed&family=Cabin:wght@400;700&family=DM+Serif+Display&display=swap" rel="stylesheet">-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<!--    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;600&family=Nunito+Sans:ital,wght@0,900;1,900&display=swap" rel="stylesheet">-->
+    <!--    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;600&family=Nunito+Sans:ital,wght@0,900;1,900&display=swap" rel="stylesheet">-->
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;600&family=Nunito+Sans:wght@700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
@@ -28,7 +35,7 @@
 
 <body class="body page">
 
-<header class="header lazy">
+<header class="header lazy" id="header">
     <div class="container">
         <h1>
             <small>Middle/Senior Developers</small>
@@ -36,32 +43,37 @@
         </h1>
         <h2>С 31 января по 4 февраля</h2>
         <p>Мы ищем опытных специалистов уровня Middle/Senior для расширения команды в офисе или удалённо. Подай заявку с 31 января по 4 февраля и получи welcome-бонус при условии успешного прохождения испытательного срока!</p>
-        <div class="lines lines--vert lines--white">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-        <div class="lines lines--horiz lines--blue">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-        <div class="lines lines--horiz lines--orange">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-        <button type="button" class="btn" id="startJob" onclick="focusMethod()">Подать заявку</button>
+<!--        <div class="top-img">-->
+<!--            <img src="./img/top-image-small-min.svg" alt="">-->
+<!--        </div>-->
+<!--        <div class="lines lines&#45;&#45;vert lines&#45;&#45;white">-->
+<!--            <div></div>-->
+<!--            <div></div>-->
+<!--            <div></div>-->
+<!--            <div></div>-->
+<!--            <div></div>-->
+<!--        </div>-->
+<!--        <div class="lines lines&#45;&#45;horiz lines&#45;&#45;blue">-->
+<!--            <div></div>-->
+<!--            <div></div>-->
+<!--            <div></div>-->
+<!--            <div></div>-->
+<!--            <div></div>-->
+<!--        </div>-->
+<!--        <div class="lines lines&#45;&#45;horiz lines&#45;&#45;orange">-->
+<!--            <div></div>-->
+<!--            <div></div>-->
+<!--            <div></div>-->
+<!--            <div></div>-->
+<!--            <div></div>-->
+<!--        </div>-->
+<!--        <button type="button" class="smoothScroll btn" id="startJob" onclick="focusMethod()">Подать заявку</button>-->
+        <!--        <a class="smoothScroll btn" href="#1a" title="Подать заявку" onclick="focusMethod();return false;">Подать заявку</a>-->
+        <a class="smoothScroll btn" href="#startJob" title="Подать заявку">Подать заявку</a>
     </div>
 </header>
 
-<main class="main">
+<main class="main" id="main">
     <article>
         <section class="section section--participation section--white">
             <div class="container">
@@ -76,12 +88,13 @@
         </section>
         <!-- end participation section -->
 
-        <section class="section section--why section--orange">
+<!--        <section class="section section&#45;&#45;why section&#45;&#45;orange">-->
+        <section class="section section--why">
             <div class="container">
                 <h1>Почему стоит поучаствовать <br>в Azati Hiring Week?</h1>
                 <h2>Welcome-бонус</h2>
                 <p>
-                    <span>Пройдите интервью с нашим техническим лидом и получите оффер. Если вы примете оффер в течении 48 часов, вы получите гарантированный welcome-бонус в размере от <strong>2500$</strong> до <strong>4500$</strong> после успешного прохождения испытательного срока.</span>
+                    <span>Пройдите интервью с нашим техническим лидом и получите оффер. Если вы примете оффер в течении 48 часов, то получите гарантированный welcome-бонус в размере от <strong>2500$</strong> до <strong>4500$</strong> после успешного прохождения испытательного срока.</span>
                     <small>выплата бонуса осуществляется на протяжении 3 месяцев после успешного прохождения испытательного срока</small>
                 </p>
             </div>
@@ -198,38 +211,59 @@
         </section>
         <!-- end technologies section -->
 
+        <section class="section section--offer section--white">
+            <div class="container">
+                <h1>Мы предлагаем</h1>
+<!--                <p>Гарантированная выплата welcome-бонуса при условии успешного прохождения испытательного срока</p>-->
+                <ul class="offer">
+                    <li class="offer_item">Welcome-бонус после испытательного срока</li>
+                    <li class="offer_item offer_item--schedule">Гибкий рабочий график</li>
+<!--                    <li class="offer_item offer_item&#45;&#45;collaboration">Удалённое сотрудничество/ субподряд</li>-->
+                    <li class="offer_item offer_item--care">Финансирование медстраховки для всей семьи</li>
+                    <li class="offer_item offer_item--anywhere">Удалённая работа из дома либо офиса</li>
+                    <li class="offer_item offer_item--tuition">Поддержка сертификации и курсов</li>
+                    <li class="offer_item offer_item--office">Комфортный офис в центре города Гродно</li>
+                    <li class="offer_item offer_item--bonuses">Персональная бонусная программа</li>
+                    <li class="offer_item offer_item--languages">Изучение иностранных языков</li>
+                    <li class="offer_item offer_item--sale">Дисконтная программа</li>
+                </ul>
+            </div>
+        </section>
+        <!-- end offer section -->
+
         <section id="fillJobForm" class="section section--form section--orange">
+            <a name="startJob" style="position:absolute;top:0;">&nbsp;</a>
             <div class="container">
                 <h1>Заполняйте форму и присоединяйтесь к нам!</h1>
-                <form action="" method="post">
+                <form id="hiring-form" action="" method="post">
                     <div class="form">
                         <div class="form-group form-group--1">
                             <label for="form-fio">
-                                <span>Ф.И.О.</span>
-                                <input type="text" name="form-fio" id="form-fio" class="form-control" required>
+                                <span>ФИО</span>
+                                <input type="text" name="ФИО" id="form-fio" class="form-control" required>
                             </label>
                             <label for="form-age">
                                 <span>Возраст</span>
-                                <input type="number" name="form-age" id="form-age" class="form-control" min="16" max="99" value="16" required>
+                                <input type="number" name="Возраст" id="form-age" class="form-control" min="16" max="99" value="16" required>
                             </label>
                             <label for="form-city">
                                 <span>Населённый пункт</span>
-                                <input type="text" name="form-city" id="form-city" class="form-control" required>
+                                <input type="text" name="Населённый_пункт" id="form-city" class="form-control" required>
                             </label>
                         </div>
 
                         <div class="form-group form-group--2">
                             <label for="form-email">
                                 <span>Email</span>
-                                <input type="email" name="form-email" id="form-email" class="form-control" required>
+                                <input type="email" name="Email" id="form-email" class="form-control" required>
                             </label>
                             <label for="form-age">
                                 <span>Телефон</span>
-                                <input type="tel" name="form-tel" id="form-tel" class="form-control" required>
+                                <input type="tel" name="Телефон" id="form-tel" class="form-control" required>
                             </label>
                             <label for="form-position">
                                 <span>Позиция</span>
-                                <input type="text" name="form-position" id="form-position" class="form-control" required>
+                                <input type="text" name="Позиция" id="form-position" class="form-control" required>
                             </label>
                         </div>
 
@@ -237,24 +271,17 @@
                             <label for="form-experience">
                                 <span>Опыт</span>
                                 <div class="custom-select" id="form-experience" style="width:100%;">
-<!--                                    <select required>-->
-                                    <select>
-<!--                                        <option value="" disabled selected hidden> —</option>-->
+                                    <select name="Опыт" required>
                                         <option value=""> —</option>
-<!--                                        <option value="1">Junior</option>-->
                                         <option value="middle">Middle</option>
-<!--                                        <option value="middle+">Middle+</option>-->
                                         <option value="senior">Senior</option>
-<!--                                        <option value="lead">Lead</option>-->
                                     </select>
                                 </div>
                             </label>
                             <label for="form-language">
                                 <span>Английский</span>
                                 <div class="custom-select" id="form-language" style="width:100%;">
-<!--                                    <select required>-->
-                                    <select>
-<!--                                        <option value="" disabled selected hidden> —</option>-->
+                                    <select name="Английский" required>
                                         <option value=""> —</option>
                                         <option value="a1">А1 — начальный</option>
                                         <option value="a2">А2 — ниже среднего</option>
@@ -267,46 +294,27 @@
                             </label>
                             <label for="form-url">
                                 <span>Ссылка на резюме</span>
-                                <input type="url" name="form-url" id="form-url" class="form-control">
+                                <input type="url" name="Ссылка_на_резюме" id="form-url" class="form-control">
                             </label>
                         </div>
 
                         <div class="form-group form-group--4">
                             <label for="form-date">
                                 <span>Дата собеседования</span>
-                                <input type="date" name="form-date" id="form-date" class="form-control" value="2022-02-04">
+                                <input type="date" name="Дата_собеседования" id="form-date" class="form-control" value="2022-02-01"  min="2022-02-01" max="2022-02-28">
                             </label>
                             <label class="b-checkbox">
                                 <span class="small">Я согласен(-на) с <a href="https://azati.ai/privacy-policy/" target="_blank">Политикой конфиденциальности</a> и разрешаю обрабатывать мои персональные данные для целей, указанных в Политике конфиденциальности.</span>
-                                <input type="checkbox" checked="checked">
+                                <input id="policy-agreed" type="checkbox">
                                 <span class="checkmark"></span>
                             </label>
-                            <input type="submit" class="btn" value="Отправить">
+                            <input id="hiring-form-submit" type="submit" class="btn" value="Отправить">
                         </div>
                     </div>
                 </form>
             </div>
         </section>
         <!-- end form section -->
-
-        <section class="section section--offer section--white">
-            <div class="container">
-                <h1>Мы предлагаем</h1>
-                <p>Гарантированная выплата welcome-бонуса при условии успешного прохождения испытательного срока</p>
-                <ul class="offer">
-                    <li class="offer_item offer_item--schedule">Гибкий рабочий график</li>
-                    <li class="offer_item offer_item--anywhere">Удалённая работа из дома либо офиса</li>
-                    <li class="offer_item offer_item--bonuses">Персональная бонусная программа</li>
-                    <li class="offer_item offer_item--sale">Дисконтная программа</li>
-                    <li class="offer_item offer_item--collaboration">Удалённое сотрудничество/ субподряд</li>
-                    <li class="offer_item offer_item--care">Финансирование медстраховки для всей семьи</li>
-                    <li class="offer_item offer_item--languages">Изучение иностранных языков</li>
-                    <li class="offer_item offer_item--tuition">Поддержка сертификации и курсов</li>
-                    <li class="offer_item offer_item--office">Комфортный офис в центре города Гродно</li>
-                </ul>
-            </div>
-        </section>
-        <!-- end offer section -->
     </article>
 </main>
 
@@ -315,34 +323,38 @@
         <h1>Контакты</h1>
         <div class="content-box">
             <figure class="blur blur--blue">
-                <img class="lazy-img" data-src="./img/avatar-anastasija-min.jpg" aria-labelledby="nastja-label">
+<!--                <img class="lazy-img" data-src="./img/avatar-anastasija-min.jpg" aria-labelledby="nastja-label">-->
+                <img src="./img/avatar-anastasija-min.jpg" aria-labelledby="nastja-label">
                 <figcaption id="nastja-label"><span>Анастасия Яроцкая</span>
-                    <a href="skype:maggie-n17?chat">maggie-n17</a>
+                    <a class="btn--skype" href="skype:maggie-n17?chat">maggie-n17</a>
                 </figcaption>
             </figure>
-            <figure class="blur blur--orange">
-                <img class="lazy-img" data-src="./img/avatar-anja-min.jpg" aria-labelledby="anja-label">
-                <figcaption id="anja-label"><span>Анна Войтович</span>
-                    <a href="skype:hr_itibo?chat">hr_itibo</a>
-                </figcaption>
-            </figure>
-        </div>
-
-        <div class="content-bottom">
-            <address>
+            <address class="footer_address">
+                <a class="footer_logo" href="https://azati.ai/" target="_blank">
+                    <img src="./img/logo-azati.svg" width="100" alt="Azati">
+                </a>
                 <a href="tel:+375445555169">+375-44-55-55-169</a><br>
-                Levels 5–6, Marx Street, 31<br>
-                Hrodna, Belarus
+                5–6 этаж, <br>ул. Карла Маркса, 31<br>
+                Гродно, Беларусь
+<!--                <a class="btn&#45;&#45;telegram" href="tg://resolve?domain=HR_azati" target="_blank"><span>HR azati</span></a>-->
+                <a class="btn--telegram" href="https://telegram.im/HR_azati" target="_blank"><span>HR azati</span></a>
             </address>
-            <!--                <a class="btn" href="tg://resolve?domain=<USERNAME>">Telegram</a>-->
-            <a class="btn" href="https://telegram.im/@<USERNAME>">Telegram</a>
+            <figure class="blur blur--orange">
+<!--                <img class="lazy-img" data-src="./img/avatar-anja-min.jpg" aria-labelledby="anja-label">-->
+                <img src="./img/avatar-anja-min.jpg" aria-labelledby="anja-label">
+                <figcaption id="anja-label"><span>Анна Войтович</span>
+                    <a class="btn--skype" href="skype:hr_itibo?chat">hr_itibo</a>
+                </figcaption>
+            </figure>
         </div>
     </div>
 </footer>
 
 
 <!-- Smooth to form -->
-<script defer src="js/smooth.js"></script>
+<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
+<script defer src="js/smoothscroll.js"></script>
+<!--<script defer src="js/smooth.js"></script>-->
 
 <!-- Custom Select -->
 <script defer src="js/custom-select.js"></script>
@@ -350,31 +362,57 @@
 <!-- Background Images Lazy Loading -->
 <script defer src="js/lazy.js"></script>
 
-<!-- Technologies Slider -->
-<!--<script defer src="js/chief-slider.js"></script>-->
-<!--<script>-->
-<!--    document.addEventListener('DOMContentLoaded', function () {-->
-<!--        const slider2 = new ChiefSlider('.slider-chief', {-->
-<!--            loop: true,-->
-<!--            autoplay: false,-->
-<!--            interval: 5000,-->
-<!--            refresh: true,-->
-<!--        });-->
-<!--    });-->
-<!--</script>-->
+<!-- Scroll -->
+<script defer src="js/scroll.js"></script>
 
+<script>
+    function sendData(form) {
+        const XHR = new XMLHttpRequest();
+        const FD = new FormData( form );
 
-<!-- Top Slider -->
-<!--<script defer src="js/simple-adaptive-slider.js"></script>-->
-<!--<script>-->
-<!--    document.addEventListener('DOMContentLoaded', function () {-->
-<!--        var slider = new SimpleAdaptiveSlider('.slider', {-->
-<!--            loop: true,-->
-<!--            autoplay: false,-->
-<!--            interval: 5000,-->
-<!--            swipe: true,-->
-<!--        });-->
-<!--    });-->
-<!--</script>-->
+        XHR.addEventListener( "load", function(event) {
+            document.getElementById("hiring-form-submit").disabled = false;
+            //сюда можно добавить действие со скрытием лоадера ...
+
+            if (event.target.status == 200) {
+                form.reset();
+                document.getElementById("form-result-container").innerHTML = '<div class="success">Данные успешно отправлены.</div>';
+            } else if (event.target.status == 400) {
+                console.log(event);
+                document.getElementById("form-result-container").innerHTML = '<div class="error">Данные некорректны или отсутствуют необходимые поля.</div>';
+            } else {
+                console.log(event);
+                document.getElementById("form-result-container").innerHTML = '<div class="error">Ошибка при отправке данных. Попробуйте позже.</div>';
+            }
+        } );
+
+        XHR.addEventListener( "error", function( event ) {
+            document.getElementById("hiring-form-submit").disabled = false;
+            console.log(event);
+            document.getElementById("form-result-container").innerHTML = '<div class="error">Ошибка при отправке данных. Попробуйте позже.</div>';
+        } );
+
+        document.getElementById("hiring-form-submit").disabled = true;
+        //сюда можно добавить действие с показом лоадера ...
+        XHR.open( "POST", "hiring-form/" );
+        XHR.setRequestHeader('Authorization', 'fjF*3ifj3nap1!04f82dsj!!#%MqpzZQM');
+
+        XHR.send( FD );
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const form = document.getElementById('hiring-form');
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const agreed = document.getElementById('policy-agreed');
+            if (agreed.checked) {
+                sendData(form);
+            } else {
+                alert('Пожалуйста подтвердите согласие с Политикой конфиденциальности! ')
+            }
+
+        });
+    });
+</script>
 </body>
 </html>
