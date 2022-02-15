@@ -37,10 +37,7 @@ CSS root variables media
 /* Participation section */
 .section--participation {
   position: relative;
-  z-index: 1;
-  min-height: 70vh;
-  align-items: end;
-  padding-bottom: 0 !important; }
+  z-index: 1; }
   .section--participation.replace-color {
     background-color: #F2AE2C;
     transition: background-color 0.75s ease-in-out; }
@@ -55,7 +52,10 @@ CSS root variables media
         margin-left: 35px; } }
     @media screen and (max-width: 575px) {
       .section--participation .nav-horizontal {
-        grid-template-columns: 1fr; } }
+        grid-template-columns: 1fr;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 60vw; } }
     @media screen and (min-width: 576px) {
       .section--participation .nav-horizontal {
         grid-template-columns: 1fr 1fr;
@@ -67,12 +67,14 @@ CSS root variables media
     .section--participation .nav-horizontal li {
       list-style: none;
       margin-left: 20px;
-      min-height: 170px;
       position: relative;
       z-index: 2; }
       @media screen and (min-width: 576px) {
         .section--participation .nav-horizontal li {
           line-height: 1.6; } }
+      @media screen and (min-width: 576px) {
+        .section--participation .nav-horizontal li {
+          min-height: 170px; } }
       .section--participation .nav-horizontal li:before {
         background-color: rgba(0, 118, 223, 0.1);
         border-radius: 50%;
@@ -92,47 +94,61 @@ CSS root variables media
       .section--participation .nav-horizontal li:nth-child(1):before {
         content: '1';
         transform: scale(0.5); }
+      @media screen and (max-width: 575px) {
+        .section--participation .nav-horizontal li:nth-child(1) {
+          min-height: 150px; } }
       .section--participation .nav-horizontal li:nth-child(2):before {
         content: '2';
         transform: scale(0.75); }
+      @media screen and (max-width: 575px) {
+        .section--participation .nav-horizontal li:nth-child(2) {
+          min-height: 170px; } }
       .section--participation .nav-horizontal li:nth-child(3):before {
         content: '3'; }
+      @media screen and (max-width: 575px) {
+        .section--participation .nav-horizontal li:nth-child(3) {
+          min-height: 200px; } }
       .section--participation .nav-horizontal li:nth-child(4):before {
         content: '4';
         transform: scale(1.25); }
+      @media screen and (max-width: 575px) {
+        .section--participation .nav-horizontal li:nth-child(4) {
+          min-height: 100px; } }
       .section--participation .nav-horizontal li span {
-        font-weight: 600; }
+        font-weight: 600;
+        line-height: 1.5; }
         @media screen and (max-width: 575px) {
           .section--participation .nav-horizontal li span br {
             display: none; } }
       .section--participation .nav-horizontal li:after {
         content: '';
         background-color: #F2AE2C;
-        height: .7vh;
+        height: 3px;
         position: absolute;
         left: -5px;
         z-index: -1;
         width: 26px;
-        opacity: .8;
-        transition: all 0.6s ease-in-out;
-        -webkit-transform: translate3d(0, 0, 0); }
+        opacity: .8; }
         @media screen and (max-width: 991px) {
           .section--participation .nav-horizontal li:after {
             top: 23px; } }
+        @media screen and (max-width: 575px) {
+          .section--participation .nav-horizontal li:after {
+            top: 19px; } }
         @media screen and (min-width: 992px) {
           .section--participation .nav-horizontal li:after {
             top: 26px; } }
-      .section--participation .nav-horizontal li:hover:after {
-        width: 100%; }
-  .section--participation.replace-color .nav-horizontal li:before {
-    background-color: rgba(255, 255, 255, 0.1); }
-  .section--participation.replace-color .nav-horizontal li:after {
-    background-color: #dff0ff; }
 
 /* Why section */
 .section--why {
-  color: #fff;
   z-index: 2; }
+  @media screen and (max-width: 767px) {
+    .section--why {
+      background: url("../img/bg-azati-m-min.png") #F2AE2C 50% 100% no-repeat; } }
+  @media screen and (min-width: 768px) {
+    .section--why {
+      background: url("../img/bg-azati-min.png") #F2AE2C 50% 100% no-repeat;
+      background-size: contain; } }
   @media screen and (max-width: 767px) {
     .section--why h1 br {
       display: none; } }
@@ -156,7 +172,7 @@ CSS root variables media
     .section--why small:before {
       content: '*';
       position: absolute;
-      top: 24px;
+      top: 22px;
       left: 0; }
 
 /* Offer section */
@@ -179,31 +195,43 @@ CSS root variables media
   .section--offer .offer_item {
     display: flex;
     align-items: center; }
-    @media screen and (max-width: 575px) {
-      .section--offer .offer_item {
-        background-size: auto 100% !important;
-        padding-left: 70px; } }
-    @media screen and (min-width: 576px) {
-      .section--offer .offer_item {
-        padding-left: 85px; } }
-    .section--offer .offer_item.offer_item--anywhere {
-      background: url("../img/i-work-anywhere.svg") 0 50% no-repeat; }
-    .section--offer .offer_item.offer_item--bonuses {
-      background: url("../img/i-personal-bonuses.svg") 0 50% no-repeat; }
-    .section--offer .offer_item.offer_item--care {
-      background: url("../img/i-medical-insurance.svg") 0 50% no-repeat; }
-    .section--offer .offer_item.offer_item--collaboration {
-      background: url("../img/azati_world_guaranteed_collaboration.png") 0 50% no-repeat; }
-    .section--offer .offer_item.offer_item--languages {
-      background: url("../img/i-foreign-languages.svg") 0 50% no-repeat; }
-    .section--offer .offer_item.offer_item--office {
-      background: url("../img/i-comfortable-office.svg") 0 50% no-repeat; }
-    .section--offer .offer_item.offer_item--sale {
-      background: url("../img/i-discount-program.svg") 0 50% no-repeat; }
-    .section--offer .offer_item.offer_item--schedule {
-      background: url("../img/i-flexible-schedule.svg") 0 50% no-repeat; }
-    .section--offer .offer_item.offer_item--tuition {
-      background: url("../img/i-tuition-support.svg") 0 50% no-repeat; }
+    .section--offer .offer_item span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-right: 10px; }
+      @media screen and (max-width: 575px) {
+        .section--offer .offer_item span {
+          width: 70px;
+          height: 70px; } }
+      @media screen and (max-width: 374px) {
+        .section--offer .offer_item span {
+          background-size: 40px !important;
+          width: 50px;
+          height: 50px; } }
+      @media screen and (min-width: 576px) {
+        .section--offer .offer_item span {
+          width: 85px;
+          height: 85px; } }
+    .section--offer .offer_item.offer_item--welcome span {
+      background: url("../img/i-welcome-min.svg") 50% no-repeat; }
+    .section--offer .offer_item.offer_item--anywhere span {
+      background: url("../img/i-work-anywhere.svg") 50% no-repeat; }
+    .section--offer .offer_item.offer_item--bonuses span {
+      background: url("../img/i-personal-bonuses.svg") 50% no-repeat; }
+    .section--offer .offer_item.offer_item--care span {
+      background: url("../img/i-medical-insurance.svg") 50% no-repeat; }
+    .section--offer .offer_item.offer_item--languages span {
+      background: url("../img/i-foreign-languages.svg") 50% no-repeat; }
+    .section--offer .offer_item.offer_item--office span {
+      background: url("../img/i-comfortable-office.svg") 50% no-repeat; }
+    .section--offer .offer_item.offer_item--sale span {
+      background: url("../img/i-discount-program.svg") 50% no-repeat; }
+    .section--offer .offer_item.offer_item--schedule span {
+      background: url("../img/i-flexible-schedule.svg") 50% no-repeat; }
+    .section--offer .offer_item.offer_item--tuition span {
+      background: url("../img/i-tuition-support.svg") 50% no-repeat; }
 
 /* Technologies section */
 .section--technologies {
@@ -221,7 +249,8 @@ CSS root variables media
   @media screen and (min-width: 768px) {
     .section--technologies p {
       padding-left: 20vw;
-      width: auto; } }
+      width: auto;
+      max-width: 720px; } }
   .section--technologies .technologies {
     display: grid;
     grid-gap: 10px; }
@@ -242,6 +271,8 @@ CSS root variables media
       .section--technologies .technologies {
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; } }
   .section--technologies .technologies__item {
+    background-color: transparent;
+    border: 0 none;
     display: flex;
     align-items: center;
     text-align: center; }
@@ -253,14 +284,14 @@ CSS root variables media
         height: 70px; } }
     @media screen and (min-width: 768px) {
       .section--technologies .technologies__item {
-        height: 100px;
-        padding: 10px; } }
+        height: 100px; } }
     .section--technologies .technologies__item img {
       display: block;
-      height: auto;
+      height: 100%;
+      max-width: 100%;
       margin: auto;
       opacity: .5;
-      transition: all 0.3s ease-in-out; }
+      transition: all 0.15s ease-in-out; }
       @media screen and (max-width: 575px) {
         .section--technologies .technologies__item img {
           max-height: 50px;
@@ -269,10 +300,6 @@ CSS root variables media
         .section--technologies .technologies__item img {
           max-height: 65px;
           max-width: 115px; } }
-      @media screen and (min-width: 1400px) {
-        .section--technologies .technologies__item img {
-          max-height: 80px;
-          max-width: 140px; } }
     .section--technologies .technologies__item:hover img {
       opacity: 1;
       -webkit-transform: scale(1.2); }
@@ -328,8 +355,12 @@ CSS root variables media
         grid-gap: var(--lg);
         grid-column: col / span 3;
         grid-row: row 2; } }
-  .section--form h1 {
-    max-width: 60vw; }
+  @media screen and (max-width: 575px) {
+    .section--form h1 {
+      word-break: break-word; } }
+  @media screen and (min-width: 576px) {
+    .section--form h1 {
+      max-width: 60vw; } }
   .section--form .b-checkbox {
     margin-top: 22px;
     padding-bottom: 2vh; }

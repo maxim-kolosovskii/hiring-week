@@ -9,17 +9,18 @@
     <meta name="description" content="Landing page of Azati Hiring Week.">
     <meta name="author" content="Azati">
 
-    <meta property="og:title" content="Software company in Grodno">
+    <meta property="og:title" content="Software company in Hrodna">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.azati.world/hiring/">
     <meta property="og:description" content="Landing page of Azati Hiring Week.">
     <meta property="og:image" content="image.png">
 
-    <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon/favicon-16x16.png">
-    <link rel="manifest" href="./img/favicon/site.webmanifest">
-    <link rel="mask-icon" href="./img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="manifest" href="./favicon/site.webmanifest">
+    <link rel="mask-icon" href="./favicon/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 
@@ -33,16 +34,32 @@
     <link rel="stylesheet" href="css/p-index.css" />
 </head>
 
-<body class="body page">
+<body class="body page" id="wrapper">
 
 <header class="header lazy" id="header">
-    <div class="container">
+
+    <div class="art art--1" id="layer-1">
+        <img src="./img/bg-orange-vert-min.svg" alt="">
+    </div>
+    <div class="art art--2" id="layer-2">
+        <img src="./img/bg-orange4-horiz-min.svg" alt="">
+    </div>
+    <div class="art art--3" id="layer-3">
+        <img src="./img/bg-yellow2vert-min.svg" alt="">
+    </div>
+    <div class="art art--4" id="layer-4">
+        <img src="./img/bg-orange4-vert-min.svg" alt="">
+    </div>
+
+    <div class="container content-box">
+        <img class="header_logo" src="./img/logo-azati.svg" alt="Azati">
         <h1>
             <small>Middle/Senior Developers</small>
             Azati Hiring Week
         </h1>
         <h2>С 31 января по 4 февраля</h2>
         <p>Мы ищем опытных специалистов уровня Middle/Senior для расширения команды в офисе или удалённо. Подай заявку с 31 января по 4 февраля и получи welcome-бонус при условии успешного прохождения испытательного срока!</p>
+
 <!--        <div class="top-img">-->
 <!--            <img src="./img/top-image-small-min.svg" alt="">-->
 <!--        </div>-->
@@ -67,8 +84,7 @@
 <!--            <div></div>-->
 <!--            <div></div>-->
 <!--        </div>-->
-<!--        <button type="button" class="smoothScroll btn" id="startJob" onclick="focusMethod()">Подать заявку</button>-->
-        <!--        <a class="smoothScroll btn" href="#1a" title="Подать заявку" onclick="focusMethod();return false;">Подать заявку</a>-->
+<!--        <a class="smoothScroll btn" href="#startJob" title="Подать заявку" onclick="focusMethod();return false;">Подать заявку</a>-->
         <a class="smoothScroll btn" href="#startJob" title="Подать заявку">Подать заявку</a>
     </div>
 </header>
@@ -88,8 +104,7 @@
         </section>
         <!-- end participation section -->
 
-<!--        <section class="section section&#45;&#45;why section&#45;&#45;orange">-->
-        <section class="section section--why">
+        <section class="section section--why section--orange">
             <div class="container">
                 <h1>Почему стоит поучаствовать <br>в Azati Hiring Week?</h1>
                 <h2>Welcome-бонус</h2>
@@ -104,109 +119,64 @@
         <section class="section section--technologies section--white">
             <div class="container">
                 <h1>Наши технологии</h1>
-                <p>Мы используем современные языки, инструменты и фреймворки <br>в разработке веб и мобильных приложений</p>
+                <p>Мы используем современные языки, инструменты и фреймворки в разработке веб и мобильных приложений</p>
 
                 <div class="technologies">
-                    <div class="technologies__item" data-order="1">
-                        <img class="slider__content_img lazy-img" data-src="./img/i-sinatra-min.svg" alt="Sinatra">
-                    </div>
-                    <div class="technologies__item" data-order="2">
-                        <img class="slider__content_img lazy-img" data-src="./img/i-ruby-min.svg" alt="Ruby">
-                    </div>
-                    <div class="technologies__item" data-order="3">
-                        <img class="slider__content_img lazy-img" data-src="./img/i-ibm-mq-min.svg" alt="IBM MQ">
-                    </div>
-                    <div class="technologies__item" data-order="4">
-                        <img class="slider__content_img lazy-img" data-src="./img/i-selenium-min.svg" alt="Selenium">
-                    </div>
-                    <div class="technologies__item" data-order="5">
-                        <img class="slider__content_img lazy-img" data-src="./img/i-oracle(r)-min.svg" alt="Oracle">
-                    </div>
-                    <div class="technologies__item" data-order="6">
-                        <img class="slider__content_img lazy-img" data-src="./img/i-ibm-websphere-min.svg" alt="IBM WebSphere">
-                    </div>
-                    <div class="technologies__item" data-order="7">
-                        <img class="slider__content_img lazy-img" data-src="./img/i-postgresql-min.svg" alt="PostgreSQL">
-                    </div>
-                    <div class="technologies__item" data-order="8">
-                        <img class="slider__content_img lazy-img" data-src="./img/i-spring-min.svg" alt="Spring">
-                    </div>
-                    <div class="technologies__item" data-order="9">
-                        <img class="slider__content_img lazy-img" data-src="./img/i-react-min.svg" alt="React">
-                    </div>
-                    <div class="technologies__item" data-order="10">
-                        <img class="slider__content_img lazy-img" data-src="./img/i-java8-min.svg" alt="Java 8">
-                    </div>
-                    <div class="technologies__item" data-order="11">
-                        <img class="slider__content_img lazy-img" data-src="./img/i-redis-min.svg" alt="Redis">
-                    </div>
-                    <div class="technologies__item" data-order="12">
-                        <img class="slider__content_img lazy-img" data-src="./img/i-jenkins-min.svg" alt="Jenkins">
-                    </div>
+                    <button class="technologies__item" aria-label="Ruby" data-balloon-pos="up">
+                        <img src="./img/i-ruby-min.svg" alt="Ruby">
+                    </button>
+                    <button class="technologies__item" aria-label="Java" data-balloon-pos="up">
+                        <img src="./img/i-java-min.svg" alt="Java">
+                    </button>
+                    <button class="technologies__item" aria-label="Python" data-balloon-pos="up">
+                        <img src="./img/i-python-min.svg" alt="Python">
+                    </button>
+                    <button class="technologies__item" aria-label="Laravel" data-balloon-pos="up">
+                        <img src="./img/i-laravel-min.svg" alt="Laravel">
+                    </button>
+                    <button class="technologies__item" aria-label="React" data-balloon-pos="up">
+                        <img src="./img/i-react-min.svg" alt="React">
+                    </button>
+                    <button class="technologies__item" aria-label="Angular" data-balloon-pos="up">
+                        <img src="./img/i-angular-min.svg" alt="Angular">
+                    </button>
+                    <button class="technologies__item" aria-label="Vue.js" data-balloon-pos="up">
+                        <img src="./img/i-vuejs-min.svg" alt="Vue.js">
+                    </button>
+                    <button class="technologies__item" aria-label="Node.js" data-balloon-pos="up">
+                        <img src="./img/i-nodejs-min.svg" alt="Node.js">
+                    </button>
+                    <button class="technologies__item" aria-label="PostgreSQL" data-balloon-pos="up">
+                        <img src="./img/i-postgresql-min.svg" alt="PostgreSQL">
+                    </button>
+                    <button class="technologies__item" aria-label="Oracle" data-balloon-pos="up">
+                        <img src="./img/i-oracle(r)-min.svg" alt="Oracle">
+                    </button>
+                    <button class="technologies__item" aria-label="MySQL" data-balloon-pos="up">
+                        <img src="./img/i-mysql-min.svg" alt="MySQL">
+                    </button>
+                    <button class="technologies__item" aria-label="Redis" data-balloon-pos="up">
+                        <img src="./img/i-redis-min.svg" alt="Redis">
+                    </button>
+                    <button class="technologies__item" aria-label="Amazon Web Services" data-balloon-pos="up">
+                        <img src="./img/i-amazon-web-services-min.svg" alt="Amazon Web Services">
+                    </button>
+                    <button class="technologies__item" aria-label="Alibaba Cloud" data-balloon-pos="up">
+                        <img src="./img/i-alibabacloud-min.svg" alt="Alibaba Cloud">
+                    </button>
+                    <button class="technologies__item" aria-label="Google Cloud Platform" data-balloon-pos="up">
+                        <img src="./img/i-google-cloud-min.svg" alt="Google Cloud Platform">
+                    </button>
+                    <button class="technologies__item" aria-label="AI/ML" data-balloon-pos="up">
+                        <img src="./img/i-ml-min.svg" alt="AI/ML">
+                    </button>
+                    <button class="technologies__item" aria-label="Neural Networks" data-balloon-pos="up">
+                        <img src="./img/i-neural-networks-min.svg" alt="Neural Networks">
+                    </button>
+                    <button class="technologies__item" aria-label="Computer Vision" data-balloon-pos="up">
+                        <img src="./img/i-computer-vision-min.svg" alt="Computer Vision">
+                    </button>
                 </div>
-
-<!--                <div class="slider-chief">-->
-<!--                    <div class="slider__container">-->
-<!--                        <div class="slider__wrapper">-->
-<!--                            <div class="slider__items">-->
-<!--                                <div class="slider__item">-->
-<!--                                    <img class="slider__content_img lazy-img" data-src="./img/i-sinatra-min.svg" alt="Sinatra">-->
-<!--                                </div>-->
-<!--                                <div class="slider__item">-->
-<!--                                    <img class="slider__content_img lazy-img" data-src="./img/i-ruby-min.svg" alt="Ruby">-->
-<!--                                </div>-->
-<!--                                <div class="slider__item">-->
-<!--                                    <img class="slider__content_img lazy-img" data-src="./img/i-ibm-mq-min.svg" alt="IBM MQ">-->
-<!--                                </div>-->
-<!--                                <div class="slider__item">-->
-<!--                                    <img class="slider__content_img lazy-img" data-src="./img/i-selenium-min.svg" alt="Selenium">-->
-<!--                                </div>-->
-<!--                                <div class="slider__item">-->
-<!--                                    <img class="slider__content_img lazy-img" data-src="./img/i-oracle(r)-min.svg" alt="Oracle">-->
-<!--                                </div>-->
-<!--                                <div class="slider__item">-->
-<!--                                    <img class="slider__content_img lazy-img" data-src="./img/i-ibm-websphere-min.svg" alt="IBM WebSphere">-->
-<!--                                </div>-->
-<!--                                <div class="slider__item">-->
-<!--                                    <img class="slider__content_img lazy-img" data-src="./img/i-postgresql-min.svg" alt="PostgreSQL">-->
-<!--                                </div>-->
-<!--                                <div class="slider__item">-->
-<!--                                    <img class="slider__content_img lazy-img" data-src="./img/i-spring-min.svg" alt="Spring">-->
-<!--                                </div>-->
-<!--                                <div class="slider__item">-->
-<!--                                    <img class="slider__content_img lazy-img" data-src="./img/i-react-min.svg" alt="React">-->
-<!--                                </div>-->
-<!--                                <div class="slider__item">-->
-<!--                                    <img class="slider__content_img lazy-img" data-src="./img/i-java8-min.svg" alt="Java 8">-->
-<!--                                </div>-->
-<!--                                <div class="slider__item">-->
-<!--                                    <img class="slider__content_img lazy-img" data-src="./img/i-redis-min.svg" alt="Redis">-->
-<!--                                </div>-->
-<!--                                <div class="slider__item">-->
-<!--                                    <img class="slider__content_img lazy-img" data-src="./img/i-jenkins-min.svg" alt="Jenkins">-->
-<!--                                </div>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <div class="slider_control-outer">-->
-<!--                            <a href="#" class="slider__control" data-slide="chief-prev"></a>-->
-<!--                            <a href="#" class="slider__control" data-slide="chief-next"></a>-->
-<!--                        </div>-->
-<!--                        <ol class="slider__indicators">-->
-<!--                            <li data-slide-to="0"></li>-->
-<!--                            <li data-slide-to="1"></li>-->
-<!--                            <li data-slide-to="2"></li>-->
-<!--                            <li data-slide-to="3"></li>-->
-<!--                            <li data-slide-to="4"></li>-->
-<!--                            <li data-slide-to="5"></li>-->
-<!--                            <li data-slide-to="6"></li>-->
-<!--                            <li data-slide-to="7"></li>-->
-<!--                            <li data-slide-to="8"></li>-->
-<!--                            <li data-slide-to="9"></li>-->
-<!--                            <li data-slide-to="10"></li>-->
-<!--                            <li data-slide-to="11"></li>-->
-<!--                        </ol>-->
-<!--                    </div>-->
-<!--                </div>-->
             </div>
         </section>
         <!-- end technologies section -->
@@ -214,18 +184,16 @@
         <section class="section section--offer section--white">
             <div class="container">
                 <h1>Мы предлагаем</h1>
-<!--                <p>Гарантированная выплата welcome-бонуса при условии успешного прохождения испытательного срока</p>-->
                 <ul class="offer">
-                    <li class="offer_item">Welcome-бонус после испытательного срока</li>
-                    <li class="offer_item offer_item--schedule">Гибкий рабочий график</li>
-<!--                    <li class="offer_item offer_item&#45;&#45;collaboration">Удалённое сотрудничество/ субподряд</li>-->
-                    <li class="offer_item offer_item--care">Финансирование медстраховки для всей семьи</li>
-                    <li class="offer_item offer_item--anywhere">Удалённая работа из дома либо офиса</li>
-                    <li class="offer_item offer_item--tuition">Поддержка сертификации и курсов</li>
-                    <li class="offer_item offer_item--office">Комфортный офис в центре города Гродно</li>
-                    <li class="offer_item offer_item--bonuses">Персональная бонусная программа</li>
-                    <li class="offer_item offer_item--languages">Изучение иностранных языков</li>
-                    <li class="offer_item offer_item--sale">Дисконтная программа</li>
+                    <li class="offer_item offer_item--welcome"><span>&nbsp;</span> Гарантированный <br>welcome-бонус после испытательного срока</li>
+                    <li class="offer_item offer_item--schedule"><span>&nbsp;</span> Гибкий рабочий график</li>
+                    <li class="offer_item offer_item--care"><span>&nbsp;</span> Финансирование медстраховки для всей семьи</li>
+                    <li class="offer_item offer_item--anywhere"><span>&nbsp;</span> Удалённая работа из дома либо офиса</li>
+                    <li class="offer_item offer_item--tuition"><span>&nbsp;</span> Поддержка сертификации и курсов</li>
+                    <li class="offer_item offer_item--office"><span>&nbsp;</span> Комфортный офис в центре города Гродно</li>
+                    <li class="offer_item offer_item--bonuses"><span>&nbsp;</span> Персональная бонусная программа</li>
+                    <li class="offer_item offer_item--languages"><span>&nbsp;</span> Изучение иностранных языков</li>
+                    <li class="offer_item offer_item--sale"><span>&nbsp;</span> Дисконтная программа</li>
                 </ul>
             </div>
         </section>
@@ -244,7 +212,7 @@
                             </label>
                             <label for="form-age">
                                 <span>Возраст</span>
-                                <input type="number" name="Возраст" id="form-age" class="form-control" min="16" max="99" value="16" required>
+                                <input type="number" name="Возраст" id="form-age" class="form-control" min="16" max="99" required>
                             </label>
                             <label for="form-city">
                                 <span>Населённый пункт</span>
@@ -271,7 +239,7 @@
                             <label for="form-experience">
                                 <span>Опыт</span>
                                 <div class="custom-select" id="form-experience" style="width:100%;">
-                                    <select name="Опыт" required>
+                                    <select id="form-experience-select" name="Опыт">
                                         <option value=""> —</option>
                                         <option value="middle">Middle</option>
                                         <option value="senior">Senior</option>
@@ -281,7 +249,7 @@
                             <label for="form-language">
                                 <span>Английский</span>
                                 <div class="custom-select" id="form-language" style="width:100%;">
-                                    <select name="Английский" required>
+                                    <select id="form-language-select" name="Английский">
                                         <option value=""> —</option>
                                         <option value="a1">А1 — начальный</option>
                                         <option value="a2">А2 — ниже среднего</option>
@@ -312,35 +280,35 @@
                         </div>
                     </div>
                 </form>
+                <div id="form-result-container"></div>
             </div>
         </section>
         <!-- end form section -->
     </article>
 </main>
 
-<footer class="footer">
+<footer class="footer" id="footer">
     <div class="container">
         <h1>Контакты</h1>
         <div class="content-box">
             <figure class="blur blur--blue">
-<!--                <img class="lazy-img" data-src="./img/avatar-anastasija-min.jpg" aria-labelledby="nastja-label">-->
                 <img src="./img/avatar-anastasija-min.jpg" aria-labelledby="nastja-label">
                 <figcaption id="nastja-label"><span>Анастасия Яроцкая</span>
                     <a class="btn--skype" href="skype:maggie-n17?chat">maggie-n17</a>
                 </figcaption>
             </figure>
             <address class="footer_address">
-                <a class="footer_logo" href="https://azati.ai/" target="_blank">
-                    <img src="./img/logo-azati.svg" width="100" alt="Azati">
-                </a>
-                <a href="tel:+375445555169">+375-44-55-55-169</a><br>
-                5–6 этаж, <br>ул. Карла Маркса, 31<br>
-                Гродно, Беларусь
-<!--                <a class="btn&#45;&#45;telegram" href="tg://resolve?domain=HR_azati" target="_blank"><span>HR azati</span></a>-->
-                <a class="btn--telegram" href="https://telegram.im/HR_azati" target="_blank"><span>HR azati</span></a>
+                <span>
+                    <a class="footer_logo" href="https://azati.ai/" target="_blank">
+                        <img src="./img/logo-azati.svg" alt="Azati">
+                    </a>
+                    <a href="tel:+375445555169">+375-44-55-55-169</a>
+                    5–6 этаж, <br>ул. Карла Маркса, 31<br>
+                    Гродно, Беларусь
+                    <a class="btn--telegram" href="https://telegram.im/HR_azati" target="_blank"><span></span> Telegram</a>
+                </span>
             </address>
             <figure class="blur blur--orange">
-<!--                <img class="lazy-img" data-src="./img/avatar-anja-min.jpg" aria-labelledby="anja-label">-->
                 <img src="./img/avatar-anja-min.jpg" aria-labelledby="anja-label">
                 <figcaption id="anja-label"><span>Анна Войтович</span>
                     <a class="btn--skype" href="skype:hr_itibo?chat">hr_itibo</a>
@@ -353,11 +321,14 @@
 
 <!-- Smooth to form -->
 <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
-<script defer src="js/smoothscroll.js"></script>
+<!--<script defer src="js/smoothscroll.js"></script>-->
 <!--<script defer src="js/smooth.js"></script>-->
 
 <!-- Custom Select -->
 <script defer src="js/custom-select.js"></script>
+
+<!-- Paralax -->
+<script defer src="js/paralax.js"></script>
 
 <!-- Background Images Lazy Loading -->
 <script defer src="js/lazy.js"></script>
@@ -404,13 +375,33 @@
         const form = document.getElementById('hiring-form');
         form.addEventListener('submit', function (e) {
             e.preventDefault();
+
             const agreed = document.getElementById('policy-agreed');
-            if (agreed.checked) {
-                sendData(form);
-            } else {
-                alert('Пожалуйста подтвердите согласие с Политикой конфиденциальности! ')
+            const experience = document.getElementById('form-experience-select');
+            const experience_container = document.getElementById('form-experience');
+            const language = document.getElementById('form-language-select');
+            const language_container = document.getElementById('form-language');
+
+            if (experience_container.classList.contains("select-required")) {
+                experience_container.classList.remove("select-required");
+            }
+            if (language_container.classList.contains("select-required")) {
+                language_container.classList.remove("select-required");
             }
 
+            if ( agreed.checked && (experience.value !== '') && (language.value !== '') ) {
+                sendData(form);
+            } else {
+                if (!agreed.checked) {
+                    alert('Пожалуйста подтвердите согласие с Политикой конфиденциальности! ');
+                }
+                if (experience.value == '') {
+                    experience_container.classList.add("select-required");
+                }
+                if (language.value == '') {
+                    language_container.classList.add("select-required");
+                }
+            }
         });
     });
 </script>

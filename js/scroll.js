@@ -1,6 +1,6 @@
-$(window).on("scroll", function() {
-    $('.section--participation').toggleClass("replace-color", $(this).scrollTop() > $(window).height());
-});
+// $(window).on("scroll", function() {
+//     $('.section--participation').toggleClass("replace-color", $(this).scrollTop() > $(window).height());
+// });
 
 
 // $(window).scroll(function(){
@@ -13,8 +13,8 @@ $(window).on("scroll", function() {
 
 
 // Add class to Footer when scroll
-var postion = $('#main').offset().top,
-    height = $('#main').height();
+var postion = $('#footer').offset().top,
+    height = $('#footer').height();
 
 $(document).on('scroll', function (){
     var scroll = $(document).scrollTop();
